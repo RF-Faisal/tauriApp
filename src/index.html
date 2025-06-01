@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USB & Headphone Controller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Device Controller</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <h2>USB Connection</h2>
+                <button id="usbButton" class="toggle-button off">
+                    <span class="icon">🔌</span>
+                    <span class="status">OFF</span>
+                </button>
+            </div>
+            
+            <div class="control-group">
+                <h2>Headphone Jack</h2>
+                <button id="headphoneButton" class="select-button">
+                    <span class="icon">🎧</span>
+                    <span class="status">Disconnected</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="status-panel">
+            <h3>Status</h3>
+            <div class="status-info">
+                <p>USB: <span id="usbStatus">OFF</span></p>
+                <p>Headphone: <span id="headphoneStatus">Disconnected</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for headphone selection -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>Select Headphone Jack Type</h3>
+            <div class="options">
+                <button class="option-button" data-option="3 Pin">
+                    <span class="option-icon">🔌</span>
+                    3 Pin
+                </button>
+                <button class="option-button" data-option="4 Pin">
+                    <span class="option-icon">🔌</span>
+                    4 Pin
+                </button>
+                <button class="option-button" data-option="Disconnected">
+                    <span class="option-icon">❌</span>
+                    Disconnected
+                </button>
+            </div>
+            <button id="closeModal" class="close-button">Cancel</button>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
